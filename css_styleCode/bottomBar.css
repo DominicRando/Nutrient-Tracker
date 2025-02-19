@@ -1,0 +1,14 @@
+.bottom-bar {
+    position: fixed; /* Keeps it at the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 50px; /* Adjust height as needed */
+    background-color: #2d355b; /* Dark background */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
