@@ -1,0 +1,68 @@
+<!--
+<script> – Embeds JavaScript code.
+<noscript> – Provides fallback content if JavaScript is disabled.
+<link> – Links external stylesheets or resources.
+<style> – Embeds CSS styles directly in HTML.
+<meta> – Defines metadata like character encoding, viewport settings, etc.
+<base> – Sets the base URL for relative links.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A demonstration of scripting and metadata tags in HTML">
+    <meta name="author" content="John Doe">
+    <meta name="keywords" content="HTML, Metadata, Scripting, Examples">
+    
+    <title>HTML Scripting & Metadata Example</title>
+
+    <!-- Base URL -->
+    <base href="https://www.example.com/" target="_blank">
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS using <style> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: darkblue;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- JavaScript inside <script> -->
+    <script>
+        function showAlert() {
+            alert("Hello! This is an alert triggered by JavaScript.");
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>HTML Scripting & Metadata Examples</h1>
+
+    <!-- JavaScript Trigger -->
+    <button onclick="showAlert()">Click Me</button>
+
+    <!-- Noscript Example -->
+    <noscript>
+        <p style="color: red;">JavaScript is disabled in your browser. Some features may not work.</p>
+    </noscript>
+
+    <!-- Using <base> tag: This link will use the base URL -->
+    <p>Visit our <a href="about.html">About Page</a> (this will open in a new tab due to the <code>&lt;base&gt;</code> tag).</p>
+
+</body>
+</html>

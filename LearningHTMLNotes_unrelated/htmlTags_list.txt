@@ -1,0 +1,122 @@
+Basic Structure
+<html> – The root element of an HTML document.
+<head> – Contains metadata, links to stylesheets, and scripts.
+<title> – Defines the title of the webpage (displayed on the browser tab).
+<body> – Contains the visible content of the webpage.
+
+Text & Formatting
+<h1> to <h6> – Headings, <h1> being the largest and <h6> the smallest.
+<p> – Defines a paragraph of text.
+<br> – Inserts a line break (self-closing tag).
+<hr> – Inserts a horizontal line (self-closing tag).
+<strong> – Makes text bold and emphasizes importance.
+<b> – Makes text bold without adding importance.
+<em> – Makes text italic and emphasizes importance.
+<i> – Makes text italic without emphasis.
+<u> – Underlines text.
+<small> – Displays smaller-sized text.
+<mark> – Highlights text.
+<sup> – Displays superscript text (e.g., exponents).
+<sub> – Displays subscript text (e.g., chemical formulas).
+<pre> – Preserves whitespace and formatting for preformatted text.
+<blockquote> – Defines a block of quoted text.
+<q> – Defines an inline short quote.
+<code> – Displays text as inline code (monospace font).
+<samp> – Defines sample output from a computer program.
+<kbd> – Represents keyboard input.
+<var> – Represents a variable in programming contexts.
+<abbr> – Defines an abbreviation or acronym with a tooltip on hover.
+<cite> – Defines the title of a work (books, articles, etc.).
+
+Lists
+<ul> – Creates an unordered (bulleted) list.
+<ol> – Creates an ordered (numbered) list.
+<li> – Defines a list item within <ul> or <ol>.
+<dl> – Defines a description list.
+<dt> – Defines the term in a description list.
+<dd> – Defines the description in a description list.
+
+Links & Navigation
+<a> – Defines a hyperlink to another page or section.
+<nav> – Defines a section of navigation links.
+<button> – Creates a clickable button.
+
+Images & Multimedia
+<img> – Embeds an image (requires src attribute).
+<figure> – Groups images or diagrams with captions.
+<figcaption> – Provides a caption for <figure>.
+<audio> – Embeds an audio file with controls.
+<video> – Embeds a video file with controls.
+<source> – Specifies multiple media sources for <audio> and <video>.
+<track> – Adds captions/subtitles to <video>.
+<iframe> – Embeds another webpage within the document.
+<embed> – Embeds external content, such as a plugin or interactive object.
+<object> – Embeds multimedia files like Flash or PDFs.
+
+Tables
+<table> – Defines a table.
+<tr> – Defines a row in a table.
+<th> – Defines a header cell in a table.
+<td> – Defines a standard data cell in a table.
+<thead> – Groups the header section of a table.
+<tbody> – Groups the body section of a table.
+<tfoot> – Groups the footer section of a table.
+<caption> – Adds a title to a table.
+<colgroup> – Defines a group of columns in a table.
+<col> – Specifies column properties for <colgroup>.
+
+Forms & Input
+<form> – Defines a form for user input.
+<input> – Creates an input field (text, checkbox, radio, etc.).
+<textarea> – Creates a multi-line text input field.
+<label> – Labels an <input> field for accessibility.
+<select> – Creates a dropdown list.
+<option> – Defines an option inside a <select> dropdown.
+<optgroup> – Groups related <option> elements inside a <select>.
+<fieldset> – Groups form elements together.
+<legend> – Defines a title for a <fieldset>.
+<button> – Defines a clickable button.
+<datalist> – Defines a list of pre-defined input values.
+<output> – Displays the result of a calculation or user action.
+
+Semantic Elements
+<header> – Defines the header section of a document or section.
+<footer> – Defines the footer section of a document or section.
+<article> – Defines an independent, self-contained content block.
+<section> – Defines a section of content.
+<aside> – Defines content that is related but separate from the main content.
+<main> – Defines the main content of the document.
+<summary> – Provides a summary or toggleable heading for <details>.
+<details> – Creates a collapsible section.
+<time> – Represents a date or time.
+<address> – Defines contact information.
+
+Divs & Spans (Layout)
+<div> – A generic container for styling and layout.
+<span> – A generic inline container for styling specific parts of text.
+
+Scripting & Metadata
+<script> – Embeds JavaScript code.
+<noscript> – Provides fallback content if JavaScript is disabled.
+<link> – Links external stylesheets or resources.
+<style> – Embeds CSS styles directly in HTML.
+<meta> – Defines metadata like character encoding, viewport settings, etc.
+<base> – Sets the base URL for relative links.
+
+Deprecated or Rarely Used
+<marquee> – Creates scrolling text (deprecated).
+<blink> – Makes text blink (deprecated).
+<bgsound> – Embeds background music (deprecated).
+<applet> – Embeds Java applets (deprecated).
+<center> – Centers content (deprecated).
+<font> – Defines font style and size (deprecated, use CSS instead).
+
+HTML5 Additions
+<canvas> – Creates a drawable area for graphics using JavaScript.
+<svg> – Embeds vector graphics.
+<dialog> – Defines a modal dialog box.
+<progress> – Represents a progress bar.
+<meter> – Represents a measurement within a known range.
+<template> – Defines reusable HTML templates.
+<slot> – Placeholder for content in Web Components.
+<shadow> – Defines a shadow DOM (deprecated).

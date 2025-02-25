@@ -1,0 +1,87 @@
+<!--
+<marquee> – Creates scrolling text (deprecated).
+<blink> – Makes text blink (deprecated).
+<bgsound> – Embeds background music (deprecated).
+<applet> – Embeds Java applets (deprecated).
+<center> – Centers content (deprecated).
+<font> – Defines font style and size (deprecated, use CSS instead).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deprecated HTML Tags Example</title>
+
+    <style>
+        /* Alternative to <blink> */
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        .blink {
+            animation: blink 1s steps(2, start) infinite;
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Alternative to <center> */
+        .center {
+            text-align: center;
+        }
+
+        /* Alternative to <font> */
+        .styled-text {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Deprecated HTML Tags Examples</h1>
+
+    <!-- Marquee (Deprecated, use CSS animations instead) -->
+    <h3>Marquee (Deprecated)</h3>
+    <marquee behavior="scroll" direction="left">This is scrolling text using <code>&lt;marquee&gt;</code>.</marquee>
+
+    <hr>
+
+    <!-- Blink (Deprecated, use CSS animation instead) -->
+    <h3>Blink (Deprecated)</h3>
+    <p><blink>This text blinks (Deprecated).</blink></p>
+    <p class="blink">This text blinks using CSS instead.</p>
+
+    <hr>
+
+    <!-- Background Sound (Deprecated) -->
+    <h3>Background Sound (Deprecated)</h3>
+    <bgsound src="music.mp3" loop="infinite">
+    <p><strong>Note:</strong> <code>&lt;bgsound&gt;</code> is deprecated. Use <code>&lt;audio&gt;</code> instead.</p>
+
+    <hr>
+
+    <!-- Java Applet (Deprecated) -->
+    <h3>Java Applet (Deprecated)</h3>
+    <p><applet code="ExampleApplet.class" width="200" height="200"></applet></p>
+    <p><strong>Note:</strong> Java applets are no longer supported in modern browsers.</p>
+
+    <hr>
+
+    <!-- Center (Deprecated, use CSS instead) -->
+    <h3>Centering Content (Deprecated)</h3>
+    <center>
+        <p>This text is centered using <code>&lt;center&gt;</code> (Deprecated).</p>
+    </center>
+    <p class="center">This text is centered using CSS.</p>
+
+    <hr>
+
+    <!-- Font (Deprecated, use CSS instead) -->
+    <h3>Font Tag (Deprecated)</h3>
+    <font face="Arial" size="5" color="blue">This text uses the deprecated <code>&lt;font&gt;</code> tag.</font>
+    <p class="styled-text">This text uses modern CSS for styling.</p>
+
+</body>
+</html>

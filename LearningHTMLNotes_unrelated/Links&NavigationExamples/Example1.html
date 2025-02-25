@@ -1,0 +1,56 @@
+<!--
+<a> – Defines a hyperlink to another page or section.
+<nav> – Defines a section of navigation links.
+<button> – Creates a clickable button.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links & Navigation Example</title>
+</head>
+<body>
+
+    <h2>Links & Navigation Examples</h2>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <!-- Hyperlink Examples -->
+    <p>Visit <a href="https://www.example.com" target="_blank">Example Website</a> for more information.</p> 
+    <!--<a href="URL"> – Creates a hyperlink. The target="_blank" attribute makes it open in a new tab.-->
+
+    <p>Jump to a section on this page:</p>
+    <a href="#section2">Go to Section 2</a>
+
+    <hr>
+
+    <!-- Sections for Internal Links -->
+    <h3 id="section1">Section 1</h3>
+    <p>This is the first section of the page.</p>
+
+    <h3 id="section2">Section 2</h3>
+    <p>You jumped to this section using the internal link above.</p>
+
+    <hr>
+
+    <!-- Button Examples -->
+    <button onclick="alert('Button clicked!')">Click Me</button>
+
+    <br><br>
+
+    <button onclick="window.location.href='https://www.example.com'">Go to Example</button>
+
+</body>
+</html>

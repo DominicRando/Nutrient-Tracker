@@ -1,0 +1,95 @@
+<!--
+<table> – Defines a table.
+<tr> – Defines a row in a table.
+<th> – Defines a header cell in a table.
+<td> – Defines a standard data cell in a table.
+<thead> – Groups the header section of a table.
+<tbody> – Groups the body section of a table.
+<tfoot> – Groups the footer section of a table.
+<caption> – Adds a title to a table.
+<colgroup> – Defines a group of columns in a table.
+<col> – Specifies column properties for <colgroup>.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Example</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tfoot {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Table Example</h2>
+
+    <!-- Table Caption -->
+    <table>
+        <caption>Student Grades</caption>
+
+        <!-- Column Group -->
+        <colgroup>
+            <col span="1" style="background-color: #f9f9f9;">
+            <col span="1">
+            <col span="1" style="background-color: #f9f9f9;">
+            <col span="1">
+        </colgroup>
+
+        <!-- Table Header -->
+        <thead>
+            <tr>
+                <th>Student</th>
+                <th>Subject</th>
+                <th>Grade</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>Mathematics</td>
+                <td>A</td>
+                <td>Excellent performance</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>Science</td>
+                <td>B</td>
+                <td>Good effort</td>
+            </tr>
+            <tr>
+                <td>David Brown</td>
+                <td>History</td>
+                <td>A-</td>
+                <td>Well done</td>
+            </tr>
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+            <tr>
+                <td colspan="4">End of Report</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

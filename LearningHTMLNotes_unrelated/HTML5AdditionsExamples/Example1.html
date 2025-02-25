@@ -1,0 +1,135 @@
+<!--
+<canvas> – Creates a drawable area for graphics using JavaScript.
+<svg> – Embeds vector graphics.
+<dialog> – Defines a modal dialog box.
+<progress> – Represents a progress bar.
+<meter> – Represents a measurement within a known range.
+<template> – Defines reusable HTML templates.
+<slot> – Placeholder for content in Web Components.
+<shadow> – Defines a shadow DOM (deprecated).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Additions Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+        svg {
+            width: 100px;
+            height: 100px;
+        }
+        dialog {
+            border: 2px solid #333;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML5 Additions Examples</h1>
+
+    <!-- Canvas Example -->
+    <h2>Canvas</h2>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(20, 20, 150, 50);
+    </script>
+
+    <hr>
+
+    <!-- SVG Example -->
+    <h2>SVG</h2>
+    <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+
+    <hr>
+
+    <!-- Dialog Example -->
+    <h2>Dialog</h2>
+    <button onclick="document.getElementById('myDialog').showModal();">Open Dialog</button>
+    <dialog id="myDialog">
+        <p>This is a modal dialog box.</p>
+        <button onclick="document.getElementById('myDialog').close();">Close</button>
+    </dialog>
+
+    <hr>
+
+    <!-- Progress Example -->
+    <h2>Progress</h2>
+    <label for="progress">Loading...</label>
+    <progress id="progress" value="70" max="100"></progress>
+
+    <hr>
+
+    <!-- Meter Example -->
+    <h2>Meter</h2>
+    <label for="battery">Battery Level:</label>
+    <meter id="battery" value="0.6" min="0" max="1" low="0.3" high="0.8" optimum="1">60%</meter>
+
+    <hr>
+
+    <!-- Template Example -->
+    <h2>Template</h2>
+    <button onclick="loadTemplate()">Load User Info</button>
+    <div id="content"></div>
+    <template id="userTemplate">
+        <p>Name: <strong>John Doe</strong></p>
+        <p>Age: <strong>30</strong></p>
+    </template>
+    <script>
+        function loadTemplate() {
+            let template = document.getElementById("userTemplate").content.cloneNode(true);
+            document.getElementById("content").appendChild(template);
+        }
+    </script>
+
+    <hr>
+
+    <!-- Slot Example (Requires Web Components) -->
+    <h2>Slot (Web Components)</h2>
+    <custom-card>
+        <span slot="title">Custom Title</span>
+        <span slot="content">Custom Content Here</span>
+    </custom-card>
+
+    <script>
+        class CustomCard extends HTMLElement {
+            constructor() {
+                super();
+                let shadow = this.attachShadow({ mode: "open" });
+
+                shadow.innerHTML = `
+                    <style>
+                        .card {
+                            border: 1px solid #333;
+                            padding: 10px;
+                            width: 200px;
+                            text-align: center;
+                        }
+                    </style>
+                    <div class="card">
+                        <h3><slot name="title">Default Title</slot></h3>
+                        <p><slot name="content">Default Content</slot></p>
+                    </div>
+                `;
+            }
+        }
+        customElements.define("custom-card", CustomCard);
+    </script>
+
+</body>
+</html>

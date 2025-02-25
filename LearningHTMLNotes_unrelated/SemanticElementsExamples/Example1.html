@@ -1,0 +1,112 @@
+<!--
+<header> – Defines the header section of a document or section.
+<footer> – Defines the footer section of a document or section.
+<article> – Defines an independent, self-contained content block.
+<section> – Defines a section of content.
+<aside> – Defines content that is related but separate from the main content.
+<main> – Defines the main content of the document.
+<summary> – Provides a summary or toggleable heading for <details>.
+<details> – Creates a collapsible section.
+<time> – Represents a date or time.
+<address> – Defines contact information.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Semantic Elements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header, footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        section {
+            margin: 20px 0;
+        }
+        article {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        aside {
+            background: #f4f4f4;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        details {
+            background: #eee;
+            padding: 10px;
+            cursor: pointer;
+        }
+        summary {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My Website</h1>
+        <p>Welcome to my awesome webpage!</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Section Example -->
+        <section>
+            <h2>About Us</h2>
+            <p>This section provides information about our company.</p>
+        </section>
+
+        <!-- Article Example -->
+        <article>
+            <h3>Latest News</h3>
+            <p>We just launched a new product!</p>
+            <time datetime="2025-02-22">February 22, 2025</time>
+        </article>
+
+        <!-- Aside Example -->
+        <aside>
+            <h3>Related Links</h3>
+            <ul>
+                <li><a href="#">Product Reviews</a></li>
+                <li><a href="#">Customer Stories</a></li>
+                <li><a href="#">Upcoming Features</a></li>
+            </ul>
+        </aside>
+
+        <!-- Details and Summary Example -->
+        <section>
+            <h2>FAQs</h2>
+            <details>
+                <summary>What services do you offer?</summary>
+                <p>We provide web development, graphic design, and consulting services.</p>
+            </details>
+            <details>
+                <summary>How can I contact you?</summary>
+                <p>You can reach us via email or phone. See our contact details below.</p>
+            </details>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <address>
+            Contact us: <a href="mailto:info@example.com">info@example.com</a> | Phone: (123) 456-7890
+        </address>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!--
+<form> – Wraps the entire form.
+<input> – Creates various types of input fields (text, email, password, radio, checkbox, number).
+<textarea> – Allows multi-line text input.
+<label> – Labels input fields for better accessibility.
+<select> – Creates a dropdown list.
+<option> – Defines items within a dropdown list.
+<optgroup> – Groups related <option> elements.
+<fieldset> – Groups related form elements.
+<legend> – Provides a title for <fieldset>.
+<button> – Creates a clickable button (for form submission).
+<datalist> – Provides predefined suggestions for an input field.
+<output> – Displays computed results (used with JavaScript).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms & Input Example</title>
+</head>
+<body>
+
+    <h2>Forms & Input Examples</h2>
+
+    <!-- Form -->
+    <form action="submit_form.php" method="post">
+        
+        <!-- Fieldset with Legend -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <!-- Label and Input for Text -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <!-- Label and Input for Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Label and Input for Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+
+            <!-- Textarea -->
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Fieldset for Choices -->
+        <fieldset>
+            <legend>Preferences</legend>
+
+            <!-- Radio Buttons -->
+            <p>Select Gender:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <!-- Checkbox -->
+            <p>Select Interests:</p>
+            <input type="checkbox" id="sports" name="interest" value="sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="music" name="interest" value="music">
+            <label for="music">Music</label>
+            <input type="checkbox" id="reading" name="interest" value="reading">
+            <label for="reading">Reading</label><br><br>
+
+            <!-- Select Dropdown with Optgroup -->
+            <label for="country">Select Your Country:</label>
+            <select id="country" name="country">
+                <optgroup label="North America">
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option value="uk">United Kingdom</option>
+                    <option value="germany">Germany</option>
+                </optgroup>
+            </select><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Datalist Example -->
+        <label for="browser">Choose a browser:</label>
+        <input list="browsers" id="browser" name="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+            <option value="Opera">
+        </datalist><br><br>
+
+        <!-- Output Example (for JavaScript) -->
+        <label for="number1">Enter a number:</label>
+        <input type="number" id="number1" oninput="calculate()">
+        <output id="result"></output><br><br>
+
+        <!-- Button to Submit -->
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+        function calculate() {
+            let num = document.getElementById("number1").value;
+            document.getElementById("result").textContent = num * 2;
+        }
+    </script>
+
+</body>
+</html>
