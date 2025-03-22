@@ -1,0 +1,21 @@
+unit_name,unit_of_measurement,unit_description
+Gram,g,base metric unit of weight; 1000 grams = 1 kilogram
+Kilogram,kg,1 kilogram = 1000 grams
+Milligram,mg,1 milligram = 1/1000 of a gram
+Microgram,µg,1 microgram = 1/1000000 of a gram
+Ounce,oz,1 ounce = 28.35 grams
+Pound,lb,1 pound = 16 ounces = 453.59 grams
+Liter,L,base metric unit of volume; 1 liter = 1000 milliliters
+Milliliter,mL,1 milliliter = 1/1000 of a liter
+Gallon (US),gal,1 gallon = 3.785 liters
+Quart (US),qt,1 quart = 1/4 gallon = 0.946 liters
+Pint (US),pt,1 pint = 1/2 quart = 473 milliliters
+Cup (US),cup,1 cup = 8 fluid ounces = ~240 milliliters
+Tablespoon,tbsp,1 tablespoon = 1/16 cup = 15 milliliters
+Teaspoon,tsp,1 teaspoon = 1/3 tablespoon = 5 milliliters
+Fluid ounce (US),fl oz,1 fluid ounce = 29.57 milliliters
+Calorie,cal,1 calorie = 4.184 joules (not commonly used alone in food)
+Kilocalorie,kcal,1 kilocalorie = 1000 calories = food energy unit (often just called "calorie")
+Kilojoule,kJ,1 kilocalorie = 4.184 kilojoules
+International Unit,IU,varies by substance; e.g.1 IU Vitamin D = 0.025 µg cholecalciferol
+Percent Daily Value,%DV,% of recommended daily intake based on a 2000-calorie diet

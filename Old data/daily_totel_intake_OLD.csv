@@ -1,0 +1,57 @@
+nutrient_name,age_range,women_intake,men_intake,age_range_for_max,max_safe_amount,unit_of_measurement
+Vitamin A,18+,700,900,18+,3000,micrograms
+Thiamin (vitamin B1),18+,1.1,1.2,,Not known,milligrams
+Riboflavin (vitamin B2),18+,1.1,1.3,,Not known,milligrams
+Niacin (vitamin B3; nicotinic acid),18+,14,16,18+,35,milligrams
+Pantothenic Acid (vitamin B5),18+,5,5,,Not known,milligrams
+Vitamin B6,19-50,1.3,1.3,18+,100,milligrams
+Vitamin B6,51+,1.5,1.7,18+,100,milligrams
+Biotin (vitamin B7),18+,30,30,,Not known,micrograms
+Folate (vitamin B9),18+,400,400,18+,1000,micrograms
+Vitamin B12,18+,2.4,2.4,,Not known,micrograms
+Vitamin C,18+,75,90,18+,2000,milligrams
+Choline,18+,425,550,18+,3500,milligrams
+Vitamin D,19-70,15,15,18+,100,micrograms
+Vitamin D,71+,20,20,18+,100,micrograms
+Vitamin E,18+,15,15,18+,1000,milligrams
+Vitamin K,18+,90,120,,Not known,micrograms
+Calcium,31-50,1000,1000,18+,2500,milligrams
+Calcium,51+,1200,1200,18+,2500,milligrams
+Chloride,19-50,2.3,2.3,,Not known,grams
+Chloride,51-70,2.0,2.0,,Not known,grams
+Chloride,71+,1.8,1.8,,Not known,grams
+Chromium,31-50,25,35,,Not known,micrograms
+Chromium,51+,20,30,,Not known,micrograms
+Copper,18+,900,900,18+,10000,micrograms
+Fluoride,18+,3,4,18+,10,milligrams
+Iodine,18+,150,150,18+,1100,micrograms
+Iron,31-50,18,8,18+,45,milligrams
+Iron,51+,8,8,18+,45,milligrams
+Magnesium,19-30,310,400,18+,350,milligrams
+Magnesium,31+,320,420,18+,350,milligrams
+Manganese,18+,1.8,2.3,18+,11,milligrams
+Molybdenum,18+,45,45,18+,2000,micrograms
+Nickel,18+,,,,,
+Phosphorus,18+,700,700,31-70,4000,milligrams
+Phosphorus,18+,700,700,71+,3000,milligrams
+Potassium,14-18,2300,3000,,Not known,milligrams
+Potassium,19+,2600,3400,,Not known,milligrams
+Selenium,18+,55,55,18+,400,micrograms
+Sodium,18+,1500,1500,,Not determined,milligrams
+Zinc,18+,8,11,18+,40,milligrams
+Total Fat,18+,Not established,Not established,18+,20-35% of calories (~77g),grams
+Saturated Fat,18+,As low as possible,As low as possible,18+,<10% of calories (~22g),grams
+Protein,18+,46,56,,Not established,grams
+Carbohydrate,18+,130,130,,Not established,grams
+Added Sugars,18+,<50,<50,,Not established,grams
+Fiber,18+,25,38,,Not established,grams
+Cholesterol,18+,As low as possible,As low as possible,,<300,milligrams
+Net Carbohydrates,18+,Not established,Not established,,Not established,grams
+Omega-3 Fatty Acids,18+,1.1,1.6,,Not established,grams
+Omega-6 Fatty Acids,18+,12,17,,Not established,grams
+Trans Fatty Acids,18+,As low as possible,As low as possible,,Not established,grams
+Water,18+,2700,3700,,Not established,grams
+Caffeine,18+,<=400,<=400,18+,400,milligrams
+Alcohol,18+,<=14,<=28,18+,14g / 28g (moderate),grams
+Monounsaturated Fatty Acids,18+,Not established,Not established,,Not established,milligrams
+Polyunsaturated Fatty Acids,18+,Not established,Not established,,Not established,milligrams
