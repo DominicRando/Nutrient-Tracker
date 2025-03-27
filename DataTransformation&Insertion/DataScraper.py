@@ -2,17 +2,32 @@ import csv
 import psycopg2
 
 class daily_total_intake_Table1:
-    def __init__(self, nutrient_name, daily_rec_amount_total, unit_of_measurement) :
-        self.nutrient_name = nutrient_name
-        self.daily_rec_amount_total = daily_rec_amount_total
+    def __init__(self, intake_id,nutrient_id,age_range,women_intake,men_intake,age_range_for_max,max_safe_amount,unit_of_measurement) :
+        self.intake_id = intake_id,
+        self.nutrient_id = nutrient_id,
+        self.age_range = age_range
+        self.women_intake = women_intake
+        self.men_intake = men_intake
+        self.age_range_for_max = age_range_for_max
+        self.max_safe_amount = max_safe_amount
         self.unit_of_measurement = unit_of_measurement
     def __str__(self) :
-        return f"Nutrient Name: {self.nutrient_name}, Daily Rec Amount Total: {self.daily_rec_amount_total}, Unit of Measurement: {self.unit_of_measurement}"
+        return (
+            f"intake_id: {self.intake_id}, "
+            f"nutrient_id: {self.nutrient_id}"
+            f"Age Range: {self.age_range}, "
+            f"Women Intake: {self.women_intake} {self.unit_of_measurement}, "
+            f"Men Intake: {self.men_intake} {self.unit_of_measurement}, "
+            f"Max Safe Amount (Age {self.age_range_for_max or 'N/A'}): {self.max_safe_amount or 'Not known'} {self.unit_of_measurement}"
+        )
     
 class measurement_description_Table2: 
-    def __init__(self, unit_of_measurement, description) :
+    def __init__(self, unit_name, unit_of_measurement, description) :
+        self.unit_name = unit_name
         self.unit_of_measurement = unit_of_measurement
         self.description = description
+    def __str__(self) :
+        return f"Name: {self.unit_name}, Unit of Measurment: {self.unit_of_measurement}, Description: {self.description}"
 
 class productInformation_Table3: 
     def __init__(self, ID, name, food_group, calories, fat_g, protein_g, carbs_g, netCarbs_g, fiber_g, naturalSugars_g, addedSugars_g, starch_g, sucrose_g, dextrose_g, 
@@ -87,6 +102,7 @@ class DataScrapper :
       self.daily_total_intake_Table1_list = []  # Stores nutrient data
       self.measurement_description_Table2_list = [] # Stores unit descriptions
       self.product_information_Table3_list = [] # Stores product details
+      
 
     def daily_intake_T1_info(self, file_name):
         with open(file_name, mode="r", newline="", encoding="utf-8") as file : 
@@ -95,14 +111,16 @@ class DataScrapper :
             # 2. The values are the data from each row.
             reader = csv.DictReader(file) # Reads the CSV as dictionaries instead of a list of lists
             for row in reader :
-                nutrient = daily_total_intake_Table1(row["nutrient_name"], row["daily_rec_amount_total"], row["unit_of_measurement"])
+                nutrient = daily_total_intake_Table1(row["nutrient_name"],row["age_range"],row["women_intake"],row["men_intake"],row["age_range_for_max"],row["max_safe_amount"],row["unit_of_measurement"])
                 self.daily_total_intake_Table1_list.append(nutrient)
     
+#age_range,women_intake,men_intake,age_range_for_max,max_safe_amount
+
     def measurement_description_T2_info(self, file_name):
         with open(file_name, mode="r", newline="", encoding="utf-8") as file :
             reader = csv.DictReader(file)
             for row in reader :
-                measurement = measurement_description_Table2(row["unit_of_measurement"], row["description"])
+                measurement = measurement_description_Table2(row["unit_name"], row["unit_of_measurement"], row["description"])
                 self.measurement_description_Table2_list.append(measurement)
     
     def productInformation_T3_info(self, file_name):
@@ -171,19 +189,27 @@ class DataScrapper :
 scraper = DataScrapper() # Create an instance of DataScrapper
 
 # This reads data from "test.csv", creates daily_total_intake_Table1 objects, and stores them in daily_total_intake_Table1_list
-scraper.productInformation_T3_info("NutritionData.csv")
+# scraper.productInformation_T3_info("NutritionData.csv")
+
+# scraper.measurement_description_T2_info("../Measurement_Description.csv")
+
+# scraper.printList(scraper.measurement_description_Table2_list)
+
+# scraper.daily_intake_T1_info("nutrient_daily_intake.csv")
+
+# scraper.printList(scraper.daily_total_intake_Table1_list)
 
 # This prints each nutrient's details
-scraper.printList(scraper.product_information_Table3_list)
+# scraper.printList(scraper.product_information_Table3_list)
 
 ### connecting to postgresqul and inserting data into tables
 
 # Connect to your PostgreSQL database
 conn = psycopg2.connect(
-    dbname="",
-    user="",
-    password="",
-    host="localhost",
+    dbname="nutrient_tracker",
+    user="dna",
+    password="postgres",
+    host="192.168.1.151",
     port="5432"
 )
 
@@ -191,12 +217,21 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 #Insert an object into table
-insert_query="""
-INSERT INTO ....
-"""
+# insert_query="""
+# INSERT INTO ....
+# """
 
-data_to_insert = ("value1", )
+# data_to_insert = ("value1", )
 
-cur.execute()
+cur.execute("select * from test;")
 
+rows = cur.fetchall()
+
+# Print the results
+for row in rows:
+    print(row)
+
+# Close the cursor and connection
+cur.close()
+conn.close()
 
