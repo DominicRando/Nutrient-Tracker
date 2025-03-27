@@ -1,0 +1,11 @@
+Connection to nutrient_tracker database
+local host: 192.168.1.151
+remote host: 152.208.27.79
+port: 5432
+database: nutrient_tracker
+user: dna
+
+Current users
+dna - admin with full permissions to the database
+guest - for the front-end user. Limited permissions to only SELECT from tables. Currently set up to automatically have SELECT permission when new tables are made.
+    password: c4JJwSH6CxV9
