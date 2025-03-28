@@ -1,0 +1,11 @@
+Log into server LOCALLY via command line:
+psql -h 192.168.1.151 -p 5432 -d nutrient_tracker -U dna -W
+    Provide the password
+    Change 'dna' to different users
+    To log into the postgres database replace 'nutrient_tracker' to 'postgres'
+        'dna' should have all necessary permissions. If not, contact me 
+
+Log into server REMOTELY via command line:
+psql -h 152.208.27.79 -p 5432 -d nutrient_tracker -U dna -W
+    IP is different than local IP
+    Configured home network to forward the 5432 port into raspberry pi's local IP
