@@ -45,7 +45,7 @@ public class DatabaseController {
 
     @GetMapping("/hello")
     public String getHello() {
-        return "Hello World";
+        return "Hello World!";
     }
 }
 
