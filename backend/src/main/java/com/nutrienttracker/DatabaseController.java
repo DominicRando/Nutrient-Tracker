@@ -35,7 +35,6 @@ public class DatabaseController {
                     System.out.println("  " + entry.getKey() + ": " + entry.getValue());
                 }
             }
-
             // If the query works, return a success message with the result
             return "✅ Query executed. Check your console for printed results";
         } catch (Exception e) {
