@@ -1,0 +1,22 @@
+.navbar {
+    height: 5rem;
+    background-color: #111;
+    justify-content: left;
+    padding: 0 1.5rem;
+    display: flex;
+}
+
+.navbar-img {
+    width: 5rem;
+    height: 5rem;
+}
+
+/* Ensure the entire page takes full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
