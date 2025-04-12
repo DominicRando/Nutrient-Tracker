@@ -6,19 +6,30 @@
     <title>The Nutrient Tracker</title>
 
     <!-- Correct CSS file path -->
-    <link rel="stylesheet" href="css_styleCode/background.css">
-    <link rel="stylesheet" href="css_styleCode/input_wrapper.css">
-    <link rel="stylesheet" href="css_styleCode/bottomBar.css">
-    <link rel="stylesheet" href="css_styleCode/main.css">
+    <link rel="stylesheet" href="../css_styleCode/background.css">
+    <link rel="stylesheet" href="../css_styleCode/input_wrapper.css">
+    <link rel="stylesheet" href="../css_styleCode/bottomBar.css">
+    <link rel="stylesheet" href="../css_styleCode/main.css">
 
     <style>
     </style>
 </head>
 <body>
+    <h1 id="message">Loading...</h1>
+    <script>
+        fetch("http://localhost:8080/api/hello")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("message").textContent = data;
+            })
+            .catch(error => {
+                document.getElementById("message").textContent = "Error: " + error;
+            });
+    </script>
 
     <div class="navbar">
         <a href="homePage.html">
-            <img class="navbar-img" src="img/headericon.svg" alt="Home">   
+            <img class="navbar-img" src="../img/headericon.svg" alt="Home">   
         </a>
     </div>
     

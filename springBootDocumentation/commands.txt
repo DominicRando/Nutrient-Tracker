@@ -1,0 +1,9 @@
+To run the REST API, cd into backend then use the command:
+mvn spring-boot:run
+mvn clean compile
+
+If you want it to run in the background, type CTRL + z. If you want to run it to terminate, type CTRL + c
+
+If in background, find the process ID and kill it. Find it using:
+lsof -i :8080
+kill -9 [processId]

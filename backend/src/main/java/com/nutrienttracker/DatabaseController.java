@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
+// Allows any origin point (IP) to access this class
+@CrossOrigin(origins = "*")
 // Marks this class as a REST controller, so Spring Boot knows it should handle HTTP requests.
 @RestController
 
@@ -40,6 +42,11 @@ public class DatabaseController {
             // If anything goes wrong (like DB isn't connected), catch the exception and return an error message
             return "❌ Failed to connect to database: " + e.getMessage();
         }
+    }
+
+    @GetMapping("/hello")
+    public String getHello() {
+        return "Hello World";
     }
 }
 
