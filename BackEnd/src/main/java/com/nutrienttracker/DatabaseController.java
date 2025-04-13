@@ -71,6 +71,7 @@ public class DatabaseController {
         String sql = "SELECT product_id, product_name FROM product_information WHERE product_name ILIKE ?";
         String likePattern = "%" + name + "%";
 
+        // TO-DO: make this return ONLY select fields
         return jdbcTemplate.query(sql, new Object[]{likePattern}, (rs, rowNum) -> {
             product_information product = new product_information();
             product.setProduct_id(rs.getLong("product_id"));
