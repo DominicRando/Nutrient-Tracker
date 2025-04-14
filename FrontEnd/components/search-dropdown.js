@@ -19,15 +19,17 @@ class SearchDropdown extends LitElement {
   }
 
   .dropdown {
-    position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      border: 1px solid #ccc;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-      z-index: 10;
-  }
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  z-index: 10;
+}
 
   .item {
     padding: 10px;
