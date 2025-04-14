@@ -1,57 +1,471 @@
-intake_id,nutrient_id,age_range,women_intake,men_intake,age_range_for_max,max_safe_amount,unit_of_measurement
-1,3997168657,18+,700,900,18+,3000,micrograms
-2,1878714002,18+,1.1,1.2,,Not known,milligrams
-3,2710163100,18+,1.1,1.3,,Not known,milligrams
-4,1133986306,18+,14,16,18+,35,milligrams
-5,3020967742,18+,5,5,,Not known,milligrams
-6,2947293078,19-50,1.3,1.3,18+,100,milligrams
-7,2947293078,51+,1.5,1.7,18+,100,milligrams
-8,639494358,18+,30,30,,Not known,micrograms
-9,993883519,18+,400,400,18+,1000,micrograms
-10,1857433120,18+,2.4,2.4,,Not known,micrograms
-11,817130432,18+,75,90,18+,2000,milligrams
-12,1604818068,18+,425,550,18+,3500,milligrams
-13,2530167830,19-70,15,15,18+,100,micrograms
-14,2530167830,71+,20,20,18+,100,micrograms
-15,1198585450,18+,15,15,18+,1000,milligrams
-16,2252201928,18+,90,120,,Not known,micrograms
-17,2167299128,31-50,1000,1000,18+,2500,milligrams
-18,2167299128,51+,1200,1200,18+,2500,milligrams
-19,1698891978,19-50,2.3,2.3,,Not known,grams
-20,1698891978,51-70,2.0,2.0,,Not known,grams
-21,1698891978,71+,1.8,1.8,,Not known,grams
-22,2254713465,31-50,25,35,,Not known,micrograms
-23,2254713465,51+,20,30,,Not known,micrograms
-24,1876865826,18+,900,900,18+,10000,micrograms
-25,3569349903,18+,3,4,18+,10,milligrams
-26,3467209591,18+,150,150,18+,1100,micrograms
-27,612605248,31-50,18,8,18+,45,milligrams
-28,612605248,51+,8,8,18+,45,milligrams
-29,1963861803,19-30,310,400,18+,350,milligrams
-30,1963861803,31+,320,420,18+,350,milligrams
-31,3671906745,18+,1.8,2.3,18+,11,milligrams
-32,3197984987,18+,45,45,18+,2000,micrograms
-33,454860997,18+,,,,,
-34,3381839458,18+,700,700,31-70,4000,milligrams
-35,3381839458,18+,700,700,71+,3000,milligrams
-36,376724923,14-18,2300,3000,,Not known,milligrams
-37,376724923,19+,2600,3400,,Not known,milligrams
-38,3780812030,18+,55,55,18+,400,micrograms
-39,2797618007,18+,1500,1500,,Not determined,milligrams
-40,3525253828,18+,8,11,18+,40,milligrams
-41,3687625003,18+,Not established,Not established,18+,20-35% of calories (~77g),grams
-42,3097368099,18+,As low as possible,As low as possible,18+,<10% of calories (~22g),grams
-43,2187521773,18+,46,56,,Not established,grams
-44,4204841713,18+,130,130,,Not established,grams
-45,3344987277,18+,<50,<50,,Not established,grams
-46,1890670572,18+,25,38,,Not established,grams
-47,4188158356,18+,As low as possible,As low as possible,,<300,milligrams
-48,584506779,18+,Not established,Not established,,Not established,grams
-49,615906906,18+,1.1,1.6,,Not established,grams
-50,3827663318,18+,12,17,,Not established,grams
-51,3278907139,18+,As low as possible,As low as possible,,Not established,grams
-52,1669373878,18+,2700,3700,,Not established,grams
-53,2493124152,18+,<=400,<=400,18+,400,milligrams
-54,2448100534,18+,<=14,<=28,18+,14g / 28g (moderate),grams
-55,3659120074,18+,Not established,Not established,,Not established,milligrams
-56,1468544029,18+,Not established,Not established,,Not established,milligrams
+intake_id,nutrient_id,nutrient_name,age_min,age_max,sex,life_stage,recommended_amount,unit,unit_name
+1,3344987277,Added Sugars,19,50,Male,Normal,50.0,g,gram
+2,3344987277,Added Sugars,19,50,Female,Normal,50.0,g,gram
+3,3344987277,Added Sugars,51,70,Male,Normal,50.0,g,gram
+4,3344987277,Added Sugars,51,70,Female,Normal,50.0,g,gram
+5,3344987277,Added Sugars,71,120,Male,Normal,50.0,g,gram
+6,3344987277,Added Sugars,71,120,Female,Normal,50.0,g,gram
+7,2448100534,Alcohol,19,50,Male,Normal,28.0,g,gram
+8,2448100534,Alcohol,19,50,Female,Normal,14.0,g,gram
+9,2448100534,Alcohol,51,70,Male,Normal,28.0,g,gram
+10,2448100534,Alcohol,51,70,Female,Normal,14.0,g,gram
+11,2448100534,Alcohol,71,120,Male,Normal,28.0,g,gram
+12,2448100534,Alcohol,71,120,Female,Normal,14.0,g,gram
+13,639494358,Biotin (vitamin B7),19,30,Male,Normal,30.0,µg,microgram
+14,639494358,Biotin (vitamin B7),19,30,Female,Normal,30.0,µg,microgram
+15,639494358,Biotin (vitamin B7),19,30,Female,Pregnancy,30.0,µg,microgram
+16,639494358,Biotin (vitamin B7),19,30,Female,Lactation,35.0,µg,microgram
+17,639494358,Biotin (vitamin B7),31,50,Male,Normal,30.0,µg,microgram
+18,639494358,Biotin (vitamin B7),31,50,Female,Normal,30.0,µg,microgram
+19,639494358,Biotin (vitamin B7),31,50,Female,Pregnancy,30.0,µg,microgram
+20,639494358,Biotin (vitamin B7),31,50,Female,Lactation,35.0,µg,microgram
+21,639494358,Biotin (vitamin B7),51,70,Male,Normal,30.0,µg,microgram
+22,639494358,Biotin (vitamin B7),51,70,Female,Normal,30.0,µg,microgram
+23,639494358,Biotin (vitamin B7),71,120,Male,Normal,30.0,µg,microgram
+24,639494358,Biotin (vitamin B7),71,120,Female,Normal,30.0,µg,microgram
+25,2493124152,Caffeine,19,50,Male,Normal,400.0,mg,milligram
+26,2493124152,Caffeine,19,50,Female,Normal,400.0,mg,milligram
+27,2493124152,Caffeine,51,70,Male,Normal,400.0,mg,milligram
+28,2493124152,Caffeine,51,70,Female,Normal,400.0,mg,milligram
+29,2493124152,Caffeine,71,120,Male,Normal,400.0,mg,milligram
+30,2493124152,Caffeine,71,120,Female,Normal,400.0,mg,milligram
+31,2167299128,Calcium,19,30,Male,Normal,1000.0,mg,milligram
+32,2167299128,Calcium,19,30,Female,Normal,1000.0,mg,milligram
+33,2167299128,Calcium,19,30,Female,Pregnancy,1000.0,mg,milligram
+34,2167299128,Calcium,19,30,Female,Lactation,1000.0,mg,milligram
+35,2167299128,Calcium,31,50,Male,Normal,1000.0,mg,milligram
+36,2167299128,Calcium,31,50,Female,Normal,1000.0,mg,milligram
+37,2167299128,Calcium,31,50,Female,Pregnancy,1000.0,mg,milligram
+38,2167299128,Calcium,31,50,Female,Lactation,1000.0,mg,milligram
+39,2167299128,Calcium,51,70,Male,Normal,1000.0,mg,milligram
+40,2167299128,Calcium,51,70,Female,Normal,1000.0,mg,milligram
+41,2167299128,Calcium,71,120,Male,Normal,1000.0,mg,milligram
+42,2167299128,Calcium,71,120,Female,Normal,1000.0,mg,milligram
+43,4204841713,Carbohydrate,19,50,Male,Normal,130.0,g,gram
+44,4204841713,Carbohydrate,19,50,Female,Normal,130.0,g,gram
+45,4204841713,Carbohydrate,51,70,Male,Normal,130.0,g,gram
+46,4204841713,Carbohydrate,51,70,Female,Normal,130.0,g,gram
+47,4204841713,Carbohydrate,71,120,Male,Normal,130.0,g,gram
+48,4204841713,Carbohydrate,71,120,Female,Normal,130.0,g,gram
+49,1698891978,Chloride,19,30,Male,Normal,2300.0,mg,milligram
+50,1698891978,Chloride,19,30,Female,Normal,2300.0,mg,milligram
+51,1698891978,Chloride,19,30,Female,Pregnancy,2300.0,mg,milligram
+52,1698891978,Chloride,19,30,Female,Lactation,2300.0,mg,milligram
+53,1698891978,Chloride,31,50,Male,Normal,2300.0,mg,milligram
+54,1698891978,Chloride,31,50,Female,Normal,2300.0,mg,milligram
+55,1698891978,Chloride,31,50,Female,Pregnancy,2300.0,mg,milligram
+56,1698891978,Chloride,31,50,Female,Lactation,2300.0,mg,milligram
+57,1698891978,Chloride,51,70,Male,Normal,2300.0,mg,milligram
+58,1698891978,Chloride,51,70,Female,Normal,2300.0,mg,milligram
+59,1698891978,Chloride,71,120,Male,Normal,2300.0,mg,milligram
+60,1698891978,Chloride,71,120,Female,Normal,2300.0,mg,milligram
+61,4188158356,Cholesterol,19,50,Male,Normal,300.0,mg,milligram
+62,4188158356,Cholesterol,19,50,Female,Normal,300.0,mg,milligram
+63,4188158356,Cholesterol,51,70,Male,Normal,300.0,mg,milligram
+64,4188158356,Cholesterol,51,70,Female,Normal,300.0,mg,milligram
+65,4188158356,Cholesterol,71,120,Male,Normal,300.0,mg,milligram
+66,4188158356,Cholesterol,71,120,Female,Normal,300.0,mg,milligram
+67,1604818068,Choline,19,30,Male,Normal,550.0,mg,milligram
+68,1604818068,Choline,19,30,Female,Normal,425.0,mg,milligram
+69,1604818068,Choline,19,30,Female,Pregnancy,450.0,mg,milligram
+70,1604818068,Choline,19,30,Female,Lactation,550.0,mg,milligram
+71,1604818068,Choline,31,50,Male,Normal,550.0,mg,milligram
+72,1604818068,Choline,31,50,Female,Normal,425.0,mg,milligram
+73,1604818068,Choline,31,50,Female,Pregnancy,450.0,mg,milligram
+74,1604818068,Choline,31,50,Female,Lactation,550.0,mg,milligram
+75,1604818068,Choline,51,70,Male,Normal,550.0,mg,milligram
+76,1604818068,Choline,51,70,Female,Normal,425.0,mg,milligram
+77,1604818068,Choline,71,120,Male,Normal,550.0,mg,milligram
+78,1604818068,Choline,71,120,Female,Normal,425.0,mg,milligram
+79,2254713465,Chromium,19,30,Male,Normal,35.0,µg,microgram
+80,2254713465,Chromium,19,30,Female,Normal,25.0,µg,microgram
+81,2254713465,Chromium,19,30,Female,Pregnancy,30.0,µg,microgram
+82,2254713465,Chromium,19,30,Female,Lactation,45.0,µg,microgram
+83,2254713465,Chromium,31,50,Male,Normal,30.0,µg,microgram
+84,2254713465,Chromium,31,50,Female,Normal,20.0,µg,microgram
+85,2254713465,Chromium,31,50,Female,Pregnancy,30.0,µg,microgram
+86,2254713465,Chromium,31,50,Female,Lactation,45.0,µg,microgram
+87,2254713465,Chromium,51,70,Male,Normal,30.0,µg,microgram
+88,2254713465,Chromium,51,70,Female,Normal,20.0,µg,microgram
+89,2254713465,Chromium,71,120,Male,Normal,30.0,µg,microgram
+90,2254713465,Chromium,71,120,Female,Normal,20.0,µg,microgram
+91,1876865826,Copper,19,30,Male,Normal,0.9,mg,milligram
+92,1876865826,Copper,19,30,Female,Normal,0.9,mg,milligram
+93,1876865826,Copper,19,30,Female,Pregnancy,1.0,mg,milligram
+94,1876865826,Copper,19,30,Female,Lactation,1.3,mg,milligram
+95,1876865826,Copper,31,50,Male,Normal,0.9,mg,milligram
+96,1876865826,Copper,31,50,Female,Normal,0.9,mg,milligram
+97,1876865826,Copper,31,50,Female,Pregnancy,1.0,mg,milligram
+98,1876865826,Copper,31,50,Female,Lactation,1.3,mg,milligram
+99,1876865826,Copper,51,70,Male,Normal,0.9,mg,milligram
+100,1876865826,Copper,51,70,Female,Normal,0.9,mg,milligram
+101,1876865826,Copper,71,120,Male,Normal,0.9,mg,milligram
+102,1876865826,Copper,71,120,Female,Normal,0.9,mg,milligram
+103,1890670572,Fiber,19,30,Male,Normal,38.0,g,gram
+104,1890670572,Fiber,19,30,Female,Normal,25.0,g,gram
+105,1890670572,Fiber,31,50,Male,Normal,38.0,g,gram
+106,1890670572,Fiber,31,50,Female,Normal,25.0,g,gram
+107,1890670572,Fiber,51,70,Male,Normal,38.0,g,gram
+108,1890670572,Fiber,51,70,Female,Normal,25.0,g,gram
+109,1890670572,Fiber,71,120,Male,Normal,38.0,g,gram
+110,1890670572,Fiber,71,120,Female,Normal,25.0,g,gram
+111,3569349903,Fluoride,19,30,Male,Normal,4.0,mg,milligram
+112,3569349903,Fluoride,19,30,Female,Normal,3.0,mg,milligram
+113,3569349903,Fluoride,19,30,Female,Pregnancy,3.0,mg,milligram
+114,3569349903,Fluoride,19,30,Female,Lactation,3.0,mg,milligram
+115,3569349903,Fluoride,31,50,Male,Normal,4.0,mg,milligram
+116,3569349903,Fluoride,31,50,Female,Normal,3.0,mg,milligram
+117,3569349903,Fluoride,31,50,Female,Pregnancy,3.0,mg,milligram
+118,3569349903,Fluoride,31,50,Female,Lactation,3.0,mg,milligram
+119,3569349903,Fluoride,51,70,Male,Normal,4.0,mg,milligram
+120,3569349903,Fluoride,51,70,Female,Normal,3.0,mg,milligram
+121,3569349903,Fluoride,71,120,Male,Normal,4.0,mg,milligram
+122,3569349903,Fluoride,71,120,Female,Normal,3.0,mg,milligram
+123,993883519,Folate (vitamin B9),19,30,Male,Normal,400.0,µg,microgram
+124,993883519,Folate (vitamin B9),19,30,Female,Normal,400.0,µg,microgram
+125,993883519,Folate (vitamin B9),19,30,Female,Pregnancy,600.0,µg,microgram
+126,993883519,Folate (vitamin B9),19,30,Female,Lactation,500.0,µg,microgram
+127,993883519,Folate (vitamin B9),31,50,Male,Normal,400.0,µg,microgram
+128,993883519,Folate (vitamin B9),31,50,Female,Normal,400.0,µg,microgram
+129,993883519,Folate (vitamin B9),31,50,Female,Pregnancy,600.0,µg,microgram
+130,993883519,Folate (vitamin B9),31,50,Female,Lactation,500.0,µg,microgram
+131,993883519,Folate (vitamin B9),51,70,Male,Normal,400.0,µg,microgram
+132,993883519,Folate (vitamin B9),51,70,Female,Normal,400.0,µg,microgram
+133,993883519,Folate (vitamin B9),71,120,Male,Normal,400.0,µg,microgram
+134,993883519,Folate (vitamin B9),71,120,Female,Normal,400.0,µg,microgram
+135,3467209591,Iodine,19,30,Male,Normal,150.0,µg,microgram
+136,3467209591,Iodine,19,30,Female,Normal,150.0,µg,microgram
+137,3467209591,Iodine,19,30,Female,Pregnancy,220.0,µg,microgram
+138,3467209591,Iodine,19,30,Female,Lactation,290.0,µg,microgram
+139,3467209591,Iodine,31,50,Male,Normal,150.0,µg,microgram
+140,3467209591,Iodine,31,50,Female,Normal,150.0,µg,microgram
+141,3467209591,Iodine,31,50,Female,Pregnancy,220.0,µg,microgram
+142,3467209591,Iodine,31,50,Female,Lactation,290.0,µg,microgram
+143,3467209591,Iodine,51,70,Male,Normal,150.0,µg,microgram
+144,3467209591,Iodine,51,70,Female,Normal,150.0,µg,microgram
+145,3467209591,Iodine,71,120,Male,Normal,150.0,µg,microgram
+146,3467209591,Iodine,71,120,Female,Normal,150.0,µg,microgram
+147,612605248,Iron,19,30,Male,Normal,8.0,mg,milligram
+148,612605248,Iron,19,30,Female,Normal,18.0,mg,milligram
+149,612605248,Iron,19,30,Female,Pregnancy,27.0,mg,milligram
+150,612605248,Iron,19,30,Female,Lactation,9.0,mg,milligram
+151,612605248,Iron,31,50,Male,Normal,8.0,mg,milligram
+152,612605248,Iron,31,50,Female,Normal,18.0,mg,milligram
+153,612605248,Iron,31,50,Female,Pregnancy,27.0,mg,milligram
+154,612605248,Iron,31,50,Female,Lactation,9.0,mg,milligram
+155,612605248,Iron,51,70,Male,Normal,8.0,mg,milligram
+156,612605248,Iron,51,70,Female,Normal,18.0,mg,milligram
+157,612605248,Iron,71,120,Male,Normal,8.0,mg,milligram
+158,612605248,Iron,71,120,Female,Normal,18.0,mg,milligram
+159,1963861803,Magnesium,19,30,Male,Normal,400.0,mg,milligram
+160,1963861803,Magnesium,19,30,Female,Normal,310.0,mg,milligram
+161,1963861803,Magnesium,19,30,Female,Pregnancy,350.0,mg,milligram
+162,1963861803,Magnesium,19,30,Female,Lactation,310.0,mg,milligram
+163,1963861803,Magnesium,31,50,Male,Normal,420.0,mg,milligram
+164,1963861803,Magnesium,31,50,Female,Normal,320.0,mg,milligram
+165,1963861803,Magnesium,31,50,Female,Pregnancy,360.0,mg,milligram
+166,1963861803,Magnesium,31,50,Female,Lactation,320.0,mg,milligram
+167,1963861803,Magnesium,51,70,Male,Normal,420.0,mg,milligram
+168,1963861803,Magnesium,51,70,Female,Normal,320.0,mg,milligram
+169,1963861803,Magnesium,71,120,Male,Normal,420.0,mg,milligram
+170,1963861803,Magnesium,71,120,Female,Normal,320.0,mg,milligram
+171,3671906745,Manganese,19,30,Male,Normal,2.3,mg,milligram
+172,3671906745,Manganese,19,30,Female,Normal,1.8,mg,milligram
+173,3671906745,Manganese,19,30,Female,Pregnancy,2.0,mg,milligram
+174,3671906745,Manganese,19,30,Female,Lactation,2.6,mg,milligram
+175,3671906745,Manganese,31,50,Male,Normal,2.3,mg,milligram
+176,3671906745,Manganese,31,50,Female,Normal,1.8,mg,milligram
+177,3671906745,Manganese,31,50,Female,Pregnancy,2.0,mg,milligram
+178,3671906745,Manganese,31,50,Female,Lactation,2.6,mg,milligram
+179,3671906745,Manganese,51,70,Male,Normal,2.3,mg,milligram
+180,3671906745,Manganese,51,70,Female,Normal,1.8,mg,milligram
+181,3671906745,Manganese,71,120,Male,Normal,2.3,mg,milligram
+182,3671906745,Manganese,71,120,Female,Normal,1.8,mg,milligram
+183,3197984987,Molybdenum,19,30,Male,Normal,45.0,µg,microgram
+184,3197984987,Molybdenum,19,30,Female,Normal,45.0,µg,microgram
+185,3197984987,Molybdenum,19,30,Female,Pregnancy,50.0,µg,microgram
+186,3197984987,Molybdenum,19,30,Female,Lactation,50.0,µg,microgram
+187,3197984987,Molybdenum,31,50,Male,Normal,45.0,µg,microgram
+188,3197984987,Molybdenum,31,50,Female,Normal,45.0,µg,microgram
+189,3197984987,Molybdenum,31,50,Female,Pregnancy,50.0,µg,microgram
+190,3197984987,Molybdenum,31,50,Female,Lactation,50.0,µg,microgram
+191,3197984987,Molybdenum,51,70,Male,Normal,45.0,µg,microgram
+192,3197984987,Molybdenum,51,70,Female,Normal,45.0,µg,microgram
+193,3197984987,Molybdenum,71,120,Male,Normal,45.0,µg,microgram
+194,3197984987,Molybdenum,71,120,Female,Normal,45.0,µg,microgram
+195,3659120074,Monounsaturated Fatty Acids,19,50,Male,Normal,30.0,g,gram
+196,3659120074,Monounsaturated Fatty Acids,19,50,Female,Normal,30.0,g,gram
+197,3659120074,Monounsaturated Fatty Acids,51,70,Male,Normal,30.0,g,gram
+198,3659120074,Monounsaturated Fatty Acids,51,70,Female,Normal,30.0,g,gram
+199,3659120074,Monounsaturated Fatty Acids,71,120,Male,Normal,30.0,g,gram
+200,3659120074,Monounsaturated Fatty Acids,71,120,Female,Normal,30.0,g,gram
+201,584506779,Net Carbohydrates,19,50,Male,Normal,100.0,g,gram
+202,584506779,Net Carbohydrates,19,50,Female,Normal,100.0,g,gram
+203,584506779,Net Carbohydrates,51,70,Male,Normal,100.0,g,gram
+204,584506779,Net Carbohydrates,51,70,Female,Normal,100.0,g,gram
+205,584506779,Net Carbohydrates,71,120,Male,Normal,100.0,g,gram
+206,584506779,Net Carbohydrates,71,120,Female,Normal,100.0,g,gram
+207,1133986306,Niacin (vitamin B3; nicotinic acid),19,30,Male,Normal,16.0,mg,milligram
+208,1133986306,Niacin (vitamin B3; nicotinic acid),19,30,Female,Normal,14.0,mg,milligram
+209,1133986306,Niacin (vitamin B3; nicotinic acid),19,30,Female,Pregnancy,18.0,mg,milligram
+210,1133986306,Niacin (vitamin B3; nicotinic acid),19,30,Female,Lactation,17.0,mg,milligram
+211,1133986306,Niacin (vitamin B3; nicotinic acid),31,50,Male,Normal,16.0,mg,milligram
+212,1133986306,Niacin (vitamin B3; nicotinic acid),31,50,Female,Normal,14.0,mg,milligram
+213,1133986306,Niacin (vitamin B3; nicotinic acid),31,50,Female,Pregnancy,18.0,mg,milligram
+214,1133986306,Niacin (vitamin B3; nicotinic acid),31,50,Female,Lactation,17.0,mg,milligram
+215,1133986306,Niacin (vitamin B3; nicotinic acid),51,70,Male,Normal,16.0,mg,milligram
+216,1133986306,Niacin (vitamin B3; nicotinic acid),51,70,Female,Normal,14.0,mg,milligram
+217,1133986306,Niacin (vitamin B3; nicotinic acid),71,120,Male,Normal,16.0,mg,milligram
+218,1133986306,Niacin (vitamin B3; nicotinic acid),71,120,Female,Normal,14.0,mg,milligram
+219,454860997,Nickel,19,30,Male,Normal,0.1,mg,milligram
+220,454860997,Nickel,19,30,Female,Normal,0.1,mg,milligram
+221,454860997,Nickel,19,30,Female,Pregnancy,0.1,mg,milligram
+222,454860997,Nickel,19,30,Female,Lactation,0.1,mg,milligram
+223,454860997,Nickel,31,50,Male,Normal,0.1,mg,milligram
+224,454860997,Nickel,31,50,Female,Normal,0.1,mg,milligram
+225,454860997,Nickel,31,50,Female,Pregnancy,0.1,mg,milligram
+226,454860997,Nickel,31,50,Female,Lactation,0.1,mg,milligram
+227,454860997,Nickel,51,70,Male,Normal,0.1,mg,milligram
+228,454860997,Nickel,51,70,Female,Normal,0.1,mg,milligram
+229,454860997,Nickel,71,120,Male,Normal,0.1,mg,milligram
+230,454860997,Nickel,71,120,Female,Normal,0.1,mg,milligram
+231,615906906,Omega-3 Fatty Acids,19,30,Male,Normal,1.6,g,gram
+232,615906906,Omega-3 Fatty Acids,19,30,Female,Normal,1.1,g,gram
+233,615906906,Omega-3 Fatty Acids,19,30,Female,Pregnancy,1.4,g,gram
+234,615906906,Omega-3 Fatty Acids,19,30,Female,Lactation,1.3,g,gram
+235,615906906,Omega-3 Fatty Acids,31,50,Male,Normal,1.6,g,gram
+236,615906906,Omega-3 Fatty Acids,31,50,Female,Normal,1.1,g,gram
+237,615906906,Omega-3 Fatty Acids,31,50,Female,Pregnancy,1.4,g,gram
+238,615906906,Omega-3 Fatty Acids,31,50,Female,Lactation,1.3,g,gram
+239,615906906,Omega-3 Fatty Acids,51,70,Male,Normal,1.6,g,gram
+240,615906906,Omega-3 Fatty Acids,51,70,Female,Normal,1.1,g,gram
+241,615906906,Omega-3 Fatty Acids,71,120,Male,Normal,1.6,g,gram
+242,615906906,Omega-3 Fatty Acids,71,120,Female,Normal,1.1,g,gram
+243,3827663318,Omega-6 Fatty Acids,19,30,Male,Normal,17.0,g,gram
+244,3827663318,Omega-6 Fatty Acids,19,30,Female,Normal,12.0,g,gram
+245,3827663318,Omega-6 Fatty Acids,19,30,Female,Pregnancy,13.0,g,gram
+246,3827663318,Omega-6 Fatty Acids,19,30,Female,Lactation,13.0,g,gram
+247,3827663318,Omega-6 Fatty Acids,31,50,Male,Normal,17.0,g,gram
+248,3827663318,Omega-6 Fatty Acids,31,50,Female,Normal,12.0,g,gram
+249,3827663318,Omega-6 Fatty Acids,31,50,Female,Pregnancy,13.0,g,gram
+250,3827663318,Omega-6 Fatty Acids,31,50,Female,Lactation,13.0,g,gram
+251,3827663318,Omega-6 Fatty Acids,51,70,Male,Normal,17.0,g,gram
+252,3827663318,Omega-6 Fatty Acids,51,70,Female,Normal,12.0,g,gram
+253,3827663318,Omega-6 Fatty Acids,71,120,Male,Normal,17.0,g,gram
+254,3827663318,Omega-6 Fatty Acids,71,120,Female,Normal,12.0,g,gram
+255,3020967742,Pantothenic Acid (vitamin B5),19,30,Male,Normal,5.0,mg,milligram
+256,3020967742,Pantothenic Acid (vitamin B5),19,30,Female,Normal,5.0,mg,milligram
+257,3020967742,Pantothenic Acid (vitamin B5),19,30,Female,Pregnancy,6.0,mg,milligram
+258,3020967742,Pantothenic Acid (vitamin B5),19,30,Female,Lactation,7.0,mg,milligram
+259,3020967742,Pantothenic Acid (vitamin B5),31,50,Male,Normal,5.0,mg,milligram
+260,3020967742,Pantothenic Acid (vitamin B5),31,50,Female,Normal,5.0,mg,milligram
+261,3020967742,Pantothenic Acid (vitamin B5),31,50,Female,Pregnancy,6.0,mg,milligram
+262,3020967742,Pantothenic Acid (vitamin B5),31,50,Female,Lactation,7.0,mg,milligram
+263,3020967742,Pantothenic Acid (vitamin B5),51,70,Male,Normal,5.0,mg,milligram
+264,3020967742,Pantothenic Acid (vitamin B5),51,70,Female,Normal,5.0,mg,milligram
+265,3020967742,Pantothenic Acid (vitamin B5),71,120,Male,Normal,5.0,mg,milligram
+266,3020967742,Pantothenic Acid (vitamin B5),71,120,Female,Normal,5.0,mg,milligram
+267,3381839458,Phosphorus,19,30,Male,Normal,700.0,mg,milligram
+268,3381839458,Phosphorus,19,30,Female,Normal,700.0,mg,milligram
+269,3381839458,Phosphorus,19,30,Female,Pregnancy,700.0,mg,milligram
+270,3381839458,Phosphorus,19,30,Female,Lactation,700.0,mg,milligram
+271,3381839458,Phosphorus,31,50,Male,Normal,700.0,mg,milligram
+272,3381839458,Phosphorus,31,50,Female,Normal,700.0,mg,milligram
+273,3381839458,Phosphorus,31,50,Female,Pregnancy,700.0,mg,milligram
+274,3381839458,Phosphorus,31,50,Female,Lactation,700.0,mg,milligram
+275,3381839458,Phosphorus,51,70,Male,Normal,700.0,mg,milligram
+276,3381839458,Phosphorus,51,70,Female,Normal,700.0,mg,milligram
+277,3381839458,Phosphorus,71,120,Male,Normal,700.0,mg,milligram
+278,3381839458,Phosphorus,71,120,Female,Normal,700.0,mg,milligram
+279,1468544029,Polyunsaturated Fatty Acids,19,50,Male,Normal,20.0,g,gram
+280,1468544029,Polyunsaturated Fatty Acids,19,50,Female,Normal,20.0,g,gram
+281,1468544029,Polyunsaturated Fatty Acids,51,70,Male,Normal,20.0,g,gram
+282,1468544029,Polyunsaturated Fatty Acids,51,70,Female,Normal,20.0,g,gram
+283,1468544029,Polyunsaturated Fatty Acids,71,120,Male,Normal,20.0,g,gram
+284,1468544029,Polyunsaturated Fatty Acids,71,120,Female,Normal,20.0,g,gram
+285,376724923,Potassium,19,30,Male,Normal,3400.0,mg,milligram
+286,376724923,Potassium,19,30,Female,Normal,2600.0,mg,milligram
+287,376724923,Potassium,19,30,Female,Pregnancy,2900.0,mg,milligram
+288,376724923,Potassium,19,30,Female,Lactation,2800.0,mg,milligram
+289,376724923,Potassium,31,50,Male,Normal,3400.0,mg,milligram
+290,376724923,Potassium,31,50,Female,Normal,2600.0,mg,milligram
+291,376724923,Potassium,31,50,Female,Pregnancy,2900.0,mg,milligram
+292,376724923,Potassium,31,50,Female,Lactation,2800.0,mg,milligram
+293,376724923,Potassium,51,70,Male,Normal,3400.0,mg,milligram
+294,376724923,Potassium,51,70,Female,Normal,2600.0,mg,milligram
+295,376724923,Potassium,71,120,Male,Normal,3400.0,mg,milligram
+296,376724923,Potassium,71,120,Female,Normal,2600.0,mg,milligram
+297,2187521773,Protein,19,50,Male,Normal,56.0,g,gram
+298,2187521773,Protein,19,50,Female,Normal,46.0,g,gram
+299,2187521773,Protein,51,70,Male,Normal,56.0,g,gram
+300,2187521773,Protein,51,70,Female,Normal,46.0,g,gram
+301,2187521773,Protein,71,120,Male,Normal,56.0,g,gram
+302,2187521773,Protein,71,120,Female,Normal,46.0,g,gram
+303,2710163100,Riboflavin (vitamin B2),19,30,Male,Normal,1.3,mg,milligram
+304,2710163100,Riboflavin (vitamin B2),19,30,Female,Normal,1.1,mg,milligram
+305,2710163100,Riboflavin (vitamin B2),19,30,Female,Pregnancy,1.4,mg,milligram
+306,2710163100,Riboflavin (vitamin B2),19,30,Female,Lactation,1.6,mg,milligram
+307,2710163100,Riboflavin (vitamin B2),31,50,Male,Normal,1.3,mg,milligram
+308,2710163100,Riboflavin (vitamin B2),31,50,Female,Normal,1.1,mg,milligram
+309,2710163100,Riboflavin (vitamin B2),31,50,Female,Pregnancy,1.4,mg,milligram
+310,2710163100,Riboflavin (vitamin B2),31,50,Female,Lactation,1.6,mg,milligram
+311,2710163100,Riboflavin (vitamin B2),51,70,Male,Normal,1.3,mg,milligram
+312,2710163100,Riboflavin (vitamin B2),51,70,Female,Normal,1.1,mg,milligram
+313,2710163100,Riboflavin (vitamin B2),71,120,Male,Normal,1.3,mg,milligram
+314,2710163100,Riboflavin (vitamin B2),71,120,Female,Normal,1.1,mg,milligram
+315,3097368099,Saturated Fat,19,50,Male,Normal,20.0,g,gram
+316,3097368099,Saturated Fat,19,50,Female,Normal,20.0,g,gram
+317,3097368099,Saturated Fat,51,70,Male,Normal,20.0,g,gram
+318,3097368099,Saturated Fat,51,70,Female,Normal,20.0,g,gram
+319,3097368099,Saturated Fat,71,120,Male,Normal,20.0,g,gram
+320,3097368099,Saturated Fat,71,120,Female,Normal,20.0,g,gram
+321,3780812030,Selenium,19,30,Male,Normal,55.0,µg,microgram
+322,3780812030,Selenium,19,30,Female,Normal,55.0,µg,microgram
+323,3780812030,Selenium,19,30,Female,Pregnancy,60.0,µg,microgram
+324,3780812030,Selenium,19,30,Female,Lactation,70.0,µg,microgram
+325,3780812030,Selenium,31,50,Male,Normal,55.0,µg,microgram
+326,3780812030,Selenium,31,50,Female,Normal,55.0,µg,microgram
+327,3780812030,Selenium,31,50,Female,Pregnancy,60.0,µg,microgram
+328,3780812030,Selenium,31,50,Female,Lactation,70.0,µg,microgram
+329,3780812030,Selenium,51,70,Male,Normal,55.0,µg,microgram
+330,3780812030,Selenium,51,70,Female,Normal,55.0,µg,microgram
+331,3780812030,Selenium,71,120,Male,Normal,55.0,µg,microgram
+332,3780812030,Selenium,71,120,Female,Normal,55.0,µg,microgram
+333,2797618007,Sodium,19,30,Male,Normal,1500.0,mg,milligram
+334,2797618007,Sodium,19,30,Female,Normal,1500.0,mg,milligram
+335,2797618007,Sodium,19,30,Female,Pregnancy,1500.0,mg,milligram
+336,2797618007,Sodium,19,30,Female,Lactation,1500.0,mg,milligram
+337,2797618007,Sodium,31,50,Male,Normal,1500.0,mg,milligram
+338,2797618007,Sodium,31,50,Female,Normal,1500.0,mg,milligram
+339,2797618007,Sodium,31,50,Female,Pregnancy,1500.0,mg,milligram
+340,2797618007,Sodium,31,50,Female,Lactation,1500.0,mg,milligram
+341,2797618007,Sodium,51,70,Male,Normal,1500.0,mg,milligram
+342,2797618007,Sodium,51,70,Female,Normal,1500.0,mg,milligram
+343,2797618007,Sodium,71,120,Male,Normal,1500.0,mg,milligram
+344,2797618007,Sodium,71,120,Female,Normal,1500.0,mg,milligram
+345,1878714002,Thiamin (vitamin B1),19,30,Male,Normal,1.2,mg,milligram
+346,1878714002,Thiamin (vitamin B1),19,30,Female,Normal,1.1,mg,milligram
+347,1878714002,Thiamin (vitamin B1),19,30,Female,Pregnancy,1.4,mg,milligram
+348,1878714002,Thiamin (vitamin B1),19,30,Female,Lactation,1.4,mg,milligram
+349,1878714002,Thiamin (vitamin B1),31,50,Male,Normal,1.2,mg,milligram
+350,1878714002,Thiamin (vitamin B1),31,50,Female,Normal,1.1,mg,milligram
+351,1878714002,Thiamin (vitamin B1),31,50,Female,Pregnancy,1.4,mg,milligram
+352,1878714002,Thiamin (vitamin B1),31,50,Female,Lactation,1.4,mg,milligram
+353,1878714002,Thiamin (vitamin B1),51,70,Male,Normal,1.2,mg,milligram
+354,1878714002,Thiamin (vitamin B1),51,70,Female,Normal,1.1,mg,milligram
+355,1878714002,Thiamin (vitamin B1),71,120,Male,Normal,1.2,mg,milligram
+356,1878714002,Thiamin (vitamin B1),71,120,Female,Normal,1.1,mg,milligram
+357,3687625003,Total Fat,19,50,Male,Normal,78.0,g,gram
+358,3687625003,Total Fat,19,50,Female,Normal,78.0,g,gram
+359,3687625003,Total Fat,51,70,Male,Normal,78.0,g,gram
+360,3687625003,Total Fat,51,70,Female,Normal,78.0,g,gram
+361,3687625003,Total Fat,71,120,Male,Normal,78.0,g,gram
+362,3687625003,Total Fat,71,120,Female,Normal,78.0,g,gram
+363,3278907139,Trans Fatty Acids,19,50,Male,Normal,0.0,g,gram
+364,3278907139,Trans Fatty Acids,19,50,Female,Normal,0.0,g,gram
+365,3278907139,Trans Fatty Acids,51,70,Male,Normal,0.0,g,gram
+366,3278907139,Trans Fatty Acids,51,70,Female,Normal,0.0,g,gram
+367,3278907139,Trans Fatty Acids,71,120,Male,Normal,0.0,g,gram
+368,3278907139,Trans Fatty Acids,71,120,Female,Normal,0.0,g,gram
+369,3997168657,Vitamin A,19,30,Male,Normal,900.0,µg,microgram
+370,3997168657,Vitamin A,19,30,Female,Normal,700.0,µg,microgram
+371,3997168657,Vitamin A,19,30,Female,Pregnancy,770.0,µg,microgram
+372,3997168657,Vitamin A,19,30,Female,Lactation,1300.0,µg,microgram
+373,3997168657,Vitamin A,31,50,Male,Normal,900.0,µg,microgram
+374,3997168657,Vitamin A,31,50,Female,Normal,700.0,µg,microgram
+375,3997168657,Vitamin A,31,50,Female,Pregnancy,770.0,µg,microgram
+376,3997168657,Vitamin A,31,50,Female,Lactation,1300.0,µg,microgram
+377,3997168657,Vitamin A,51,70,Male,Normal,900.0,µg,microgram
+378,3997168657,Vitamin A,51,70,Female,Normal,700.0,µg,microgram
+379,3997168657,Vitamin A,71,120,Male,Normal,900.0,µg,microgram
+380,3997168657,Vitamin A,71,120,Female,Normal,700.0,µg,microgram
+381,1857433120,Vitamin B12,19,30,Male,Normal,2.4,µg,microgram
+382,1857433120,Vitamin B12,19,30,Female,Normal,2.4,µg,microgram
+383,1857433120,Vitamin B12,19,30,Female,Pregnancy,2.6,µg,microgram
+384,1857433120,Vitamin B12,19,30,Female,Lactation,2.8,µg,microgram
+385,1857433120,Vitamin B12,31,50,Male,Normal,2.4,µg,microgram
+386,1857433120,Vitamin B12,31,50,Female,Normal,2.4,µg,microgram
+387,1857433120,Vitamin B12,31,50,Female,Pregnancy,2.6,µg,microgram
+388,1857433120,Vitamin B12,31,50,Female,Lactation,2.8,µg,microgram
+389,1857433120,Vitamin B12,51,70,Male,Normal,2.4,µg,microgram
+390,1857433120,Vitamin B12,51,70,Female,Normal,2.4,µg,microgram
+391,1857433120,Vitamin B12,71,120,Male,Normal,2.4,µg,microgram
+392,1857433120,Vitamin B12,71,120,Female,Normal,2.4,µg,microgram
+393,2947293078,Vitamin B6,19,30,Male,Normal,1.3,mg,milligram
+394,2947293078,Vitamin B6,19,30,Female,Normal,1.3,mg,milligram
+395,2947293078,Vitamin B6,19,30,Female,Pregnancy,1.9,mg,milligram
+396,2947293078,Vitamin B6,19,30,Female,Lactation,2.0,mg,milligram
+397,2947293078,Vitamin B6,31,50,Male,Normal,1.3,mg,milligram
+398,2947293078,Vitamin B6,31,50,Female,Normal,1.3,mg,milligram
+399,2947293078,Vitamin B6,31,50,Female,Pregnancy,1.9,mg,milligram
+400,2947293078,Vitamin B6,31,50,Female,Lactation,2.0,mg,milligram
+401,2947293078,Vitamin B6,51,70,Male,Normal,1.3,mg,milligram
+402,2947293078,Vitamin B6,51,70,Female,Normal,1.3,mg,milligram
+403,2947293078,Vitamin B6,71,120,Male,Normal,1.3,mg,milligram
+404,2947293078,Vitamin B6,71,120,Female,Normal,1.3,mg,milligram
+405,817130432,Vitamin C,19,30,Male,Normal,90.0,mg,milligram
+406,817130432,Vitamin C,19,30,Female,Normal,75.0,mg,milligram
+407,817130432,Vitamin C,19,30,Female,Pregnancy,85.0,mg,milligram
+408,817130432,Vitamin C,19,30,Female,Lactation,120.0,mg,milligram
+409,817130432,Vitamin C,31,50,Male,Normal,90.0,mg,milligram
+410,817130432,Vitamin C,31,50,Female,Normal,75.0,mg,milligram
+411,817130432,Vitamin C,31,50,Female,Pregnancy,85.0,mg,milligram
+412,817130432,Vitamin C,31,50,Female,Lactation,120.0,mg,milligram
+413,817130432,Vitamin C,51,70,Male,Normal,90.0,mg,milligram
+414,817130432,Vitamin C,51,70,Female,Normal,75.0,mg,milligram
+415,817130432,Vitamin C,71,120,Male,Normal,90.0,mg,milligram
+416,817130432,Vitamin C,71,120,Female,Normal,75.0,mg,milligram
+417,2530167830,Vitamin D,19,30,Male,Normal,15.0,µg,microgram
+418,2530167830,Vitamin D,19,30,Female,Normal,15.0,µg,microgram
+419,2530167830,Vitamin D,19,30,Female,Pregnancy,15.0,µg,microgram
+420,2530167830,Vitamin D,19,30,Female,Lactation,15.0,µg,microgram
+421,2530167830,Vitamin D,31,50,Male,Normal,15.0,µg,microgram
+422,2530167830,Vitamin D,31,50,Female,Normal,15.0,µg,microgram
+423,2530167830,Vitamin D,31,50,Female,Pregnancy,15.0,µg,microgram
+424,2530167830,Vitamin D,31,50,Female,Lactation,15.0,µg,microgram
+425,2530167830,Vitamin D,51,70,Male,Normal,15.0,µg,microgram
+426,2530167830,Vitamin D,51,70,Female,Normal,15.0,µg,microgram
+427,2530167830,Vitamin D,71,120,Male,Normal,15.0,µg,microgram
+428,2530167830,Vitamin D,71,120,Female,Normal,15.0,µg,microgram
+429,1198585450,Vitamin E,19,30,Male,Normal,15.0,mg,milligram
+430,1198585450,Vitamin E,19,30,Female,Normal,15.0,mg,milligram
+431,1198585450,Vitamin E,19,30,Female,Pregnancy,15.0,mg,milligram
+432,1198585450,Vitamin E,19,30,Female,Lactation,19.0,mg,milligram
+433,1198585450,Vitamin E,31,50,Male,Normal,15.0,mg,milligram
+434,1198585450,Vitamin E,31,50,Female,Normal,15.0,mg,milligram
+435,1198585450,Vitamin E,31,50,Female,Pregnancy,15.0,mg,milligram
+436,1198585450,Vitamin E,31,50,Female,Lactation,19.0,mg,milligram
+437,1198585450,Vitamin E,51,70,Male,Normal,15.0,mg,milligram
+438,1198585450,Vitamin E,51,70,Female,Normal,15.0,mg,milligram
+439,1198585450,Vitamin E,71,120,Male,Normal,15.0,mg,milligram
+440,1198585450,Vitamin E,71,120,Female,Normal,15.0,mg,milligram
+441,2252201928,Vitamin K,19,30,Male,Normal,120.0,µg,microgram
+442,2252201928,Vitamin K,19,30,Female,Normal,90.0,µg,microgram
+443,2252201928,Vitamin K,19,30,Female,Pregnancy,90.0,µg,microgram
+444,2252201928,Vitamin K,19,30,Female,Lactation,90.0,µg,microgram
+445,2252201928,Vitamin K,31,50,Male,Normal,120.0,µg,microgram
+446,2252201928,Vitamin K,31,50,Female,Normal,90.0,µg,microgram
+447,2252201928,Vitamin K,31,50,Female,Pregnancy,90.0,µg,microgram
+448,2252201928,Vitamin K,31,50,Female,Lactation,90.0,µg,microgram
+449,2252201928,Vitamin K,51,70,Male,Normal,120.0,µg,microgram
+450,2252201928,Vitamin K,51,70,Female,Normal,90.0,µg,microgram
+451,2252201928,Vitamin K,71,120,Male,Normal,120.0,µg,microgram
+452,2252201928,Vitamin K,71,120,Female,Normal,90.0,µg,microgram
+453,1669373878,Water,19,50,Male,Normal,3700.0,g,gram
+454,1669373878,Water,19,50,Female,Normal,2700.0,g,gram
+455,1669373878,Water,51,70,Male,Normal,3700.0,g,gram
+456,1669373878,Water,51,70,Female,Normal,2700.0,g,gram
+457,1669373878,Water,71,120,Male,Normal,3700.0,g,gram
+458,1669373878,Water,71,120,Female,Normal,2700.0,g,gram
+459,3525253828,Zinc,19,30,Male,Normal,11.0,mg,milligram
+460,3525253828,Zinc,19,30,Female,Normal,8.0,mg,milligram
+461,3525253828,Zinc,19,30,Female,Pregnancy,11.0,mg,milligram
+462,3525253828,Zinc,19,30,Female,Lactation,12.0,mg,milligram
+463,3525253828,Zinc,31,50,Male,Normal,11.0,mg,milligram
+464,3525253828,Zinc,31,50,Female,Normal,8.0,mg,milligram
+465,3525253828,Zinc,31,50,Female,Pregnancy,11.0,mg,milligram
+466,3525253828,Zinc,31,50,Female,Lactation,12.0,mg,milligram
+467,3525253828,Zinc,51,70,Male,Normal,11.0,mg,milligram
+468,3525253828,Zinc,51,70,Female,Normal,8.0,mg,milligram
+469,3525253828,Zinc,71,120,Male,Normal,11.0,mg,milligram
+470,3525253828,Zinc,71,120,Female,Normal,8.0,mg,milligram
