@@ -1,0 +1,6 @@
+The lit framework cannot run locally, so you need to create a local "live" version of the website.
+Accomplish this using:
+    * Live Server VS Code extension
+        - Click "Go Live" in the bottom right corner
+        - Go to FrontEnd/htmlCode/homePage.htmlCode
+    * Create a local server using python (Eventually we will run server on pi)

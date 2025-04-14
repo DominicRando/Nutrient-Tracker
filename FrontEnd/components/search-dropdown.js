@@ -53,7 +53,7 @@ class SearchDropdown extends LitElement {
   };
 
   constructor() {
-    super();
+    super(); // Have to include this: 
     this.inputValue = '';
     this.results = [];
     this._latestRequest = 0;
