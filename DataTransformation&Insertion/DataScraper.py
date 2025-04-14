@@ -1,6 +1,9 @@
 import csv
 import psycopg2
+import os
+from dotenv import load_dotenv
 
+#table has since been edited 
 class daily_total_intake_Table1:
     def __init__(self, intake_id,nutrient_id,age_range,women_intake,men_intake,age_range_for_max,max_safe_amount,unit_of_measurement) :
         self.intake_id = intake_id
@@ -277,15 +280,15 @@ class DataScrapper :
                 break
 
 def databaseConnection() :
+    load_dotenv()
     # Connect to your PostgreSQL database
     conn = psycopg2.connect(
-        dbname="nutrient_tracker",
-        user="dna",
-        password="Wa7ehs3ltfm8L",
-        host="192.168.1.151",
-        port="5432"
+        dbname=os.getenv("DB_NAME"),
+        user=os.getenv("DB_USERNAME"),
+        password=os.getenv("DB_PASSWORD"),
+        host=os.getenv("DB_HOST"),
+        port=os.getenv("DB_PORT")
     )
-
     #Create a cursor
     cur = conn.cursor()
     return conn, cur
@@ -384,21 +387,22 @@ def createTables(file_path, conn, cur):
 
     print("SQL script executed successfully")
 
-conn,cur = databaseConnection()
-# Building the Database tables
-createTables("../createTables.sql", conn, cur)
 
-scraper = DataScrapper() # Create an instance of DataScrapper
-# Load CSV files into lists
-scraper.daily_intake_T1_info("../Data/daily_total_intake.csv")
-scraper.measurement_description_T2_info("../Data/measurement_description.csv")
-scraper.productInformation_T3_info("../Data/product_information.csv")
-scraper.product_nutrients_T4_info("../Data/product_nutrients.csv")
-scraper.nutrient_name_T5_info("../Data/nutrient_name.csv")
+if __name__ == "__main__":
+    conn, cur = databaseConnection()
+    createTables("../createTables.sql", conn, cur)
 
-# Insert all data
-insert_all_data(scraper, conn, cur)
+    scraper = DataScrapper() # Create an instance of DataScrapper
+    # Load CSV files into lists
+    scraper.daily_intake_T1_info("../Data/daily_total_intake.csv")
+    scraper.measurement_description_T2_info("../Data/measurement_description.csv")
+    scraper.productInformation_T3_info("../Data/product_information.csv")
+    scraper.product_nutrients_T4_info("../Data/product_nutrients.csv")
+    scraper.nutrient_name_T5_info("../Data/nutrient_name.csv")
+
+    # Insert all data
+    insert_all_data(scraper, conn, cur)
 
 
-cur.close()
-conn.close()
+    cur.close()
+    conn.close()

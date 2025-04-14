@@ -3,12 +3,14 @@ package com.nutrienttracker.TableObjects;
 public class daily_total_intake {
     private int intake_id;
     private long nutrient_id;
-    private String age_range;
-    private String women_intake;
-    private String men_intake;
-    private String age_range_for_max;
-    private String max_safe_amount;
-    private String unit_of_measurement;
+    private String nutrient_name;
+    private int age_min;
+    private int age_max;
+    private String sex;
+    private String life_stage;
+    private double recommended_amount;
+    private String unit;
+    private String unit_name;
 
     public int getIntake_id() {
         return intake_id;
@@ -24,45 +26,59 @@ public class daily_total_intake {
         this.nutrient_id = nutrient_id;
     }
 
-    public String getAge_range() {
-        return age_range;
+    public String getNutrient_name() {
+        return nutrient_name;
     }
-    public void setAge_range(String age_range) {
-        this.age_range = age_range;
-    }
-
-    public String getWomen_intake() {
-        return women_intake;
-    }
-    public void setWomen_intake(String women_intake) {
-        this.women_intake = women_intake;
+    public void setNutrient_name(String nutrient_name) {
+        this.nutrient_name = nutrient_name;
     }
 
-    public String getMen_intake() {
-        return men_intake;
+    public int getAge_min() {
+        return age_min;
     }
-    public void setMen_intake(String men_intake) {
-        this.men_intake = men_intake;
-    }
-
-    public String getAge_range_for_max() {
-        return age_range_for_max;
-    }
-    public void setAge_range_for_max(String age_range_for_max) {
-        this.age_range_for_max = age_range_for_max;
+    public void setAge_min(int age_min) {
+        this.age_min = age_min;
     }
 
-    public String getMax_safe_amount() {
-        return max_safe_amount;
+    public int getAge_max() {
+        return age_max;
     }
-    public void setMax_safe_amount(String max_safe_amount) {
-        this.max_safe_amount = max_safe_amount;
+    public void setAge_max(int age_max) {
+        this.age_max = age_max;
     }
 
-    public String getUnit_of_measurement() {
-        return unit_of_measurement;
+    public String getSex() {
+        return sex;
     }
-    public void setUnit_of_measurement(String unit_of_measurement) {
-        this.unit_of_measurement = unit_of_measurement;
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getLife_stage() {
+        return life_stage;
+    }
+    public void setLife_stage(String life_stage) {
+        this.life_stage = life_stage;
+    }
+
+    public double getRecommended_amount() {
+        return recommended_amount;
+    }
+    public void setRecommended_amount(double recommended_amount) {
+        this.recommended_amount = recommended_amount;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public String getUnit_name() {
+        return unit_name;
+    }
+    public void setUnit_name(String unit_name) {
+        this.unit_name = unit_name;
     }
 }

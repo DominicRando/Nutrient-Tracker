@@ -86,7 +86,7 @@ CREATE TABLE measurement_description (
     unit_of_measurement TEXT,
     unit_description TEXT
 );
-
+-- This had been changed so in the other sql file i am inserting the updated table
 CREATE TABLE daily_total_intake (
     intake_id INT PRIMARY KEY,
     nutrient_id BIGINT NOT NULL,
